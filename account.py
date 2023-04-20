@@ -1,28 +1,50 @@
-<<<<<<< Updated upstream
-=======
 class Account:
+    def __init__(self, name: str) -> None:
+        """
 
-    def __init__(self, name):
+        Constructor function to set up object
+        :param name: The name of the account holder
+        """
         self.__account_name = name
-        self.__balance = 0
+        self.__balance: int = 0
 
-    def deposit(self, amount):
+    def deposit(self, amount: int) -> bool:
+        """
+        Method to increase account balance
+        :param amount: Decides how much should be added to account balance
+        :return: Returns True if account balance was changed, False if amount was 0 or lower/not changed
+        """
         if amount > 0:
             self.__balance += amount
             return True
         else:
             return False
 
-    def withdraw(self, amount):
+    def withdraw(self, amount: int) -> bool:
+        """
+
+        Method to decrease account balance
+        :param amount: decides how much should be added to account balance
+        :return: Returns True if account balance was changed, False if amount was not changed/if amount was 0 or less, or greater than the account balance
+        """
         if amount > 0 and amount <= self.__balance:
             self.__balance -= amount
             return True
         else:
             return False
 
-    def get_balance(self):
+    def get_balance(self) -> int:
+        """
+
+        Method to access the account balance
+        :return: Account balance
+        """
         return self.__balance
 
-    def get_name(self):
+    def get_name(self) -> str:
+        """
+
+        Method to access the account holder's name
+        :return: Account name
+        """
         return self.__account_name
->>>>>>> Stashed changes
