@@ -24,8 +24,8 @@ class Account:
         """
 
         Method to decrease account balance
-        :param amount: decides how much should be added to account balance
-        :return: Returns True if account balance was changed, False if amount was not changed/if amount was 0 or less, or greater than the account balance
+        :param amount: Decides how much should be taken away from the account balance
+        :return: Returns True if account balance was changed, False if account balance was not changed
         """
         if amount > 0 and amount <= self.__balance:
             self.__balance -= amount
@@ -36,7 +36,7 @@ class Account:
     def get_balance(self) -> int:
         """
 
-        Method to access the account balance
+        Method to access the account holder's balance
         :return: Account balance
         """
         return self.__balance

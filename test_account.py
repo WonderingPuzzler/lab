@@ -36,3 +36,4 @@ class Test:
 
         assert self.a1.withdraw(1) is True
         assert self.a1.get_balance() == 0.5
+
