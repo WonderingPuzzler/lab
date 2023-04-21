@@ -6,9 +6,9 @@ class Account:
         :param name: The name of the account holder
         """
         self.__account_name = name
-        self.__balance = 0
+        self.__balance: float = 0
 
-    def deposit(self, amount) -> bool:
+    def deposit(self, amount: float) -> bool:
         """
         Method to increase account balance
         :param amount: Decides how much should be added to account balance
@@ -20,7 +20,7 @@ class Account:
         else:
             return False
 
-    def withdraw(self, amount) -> bool:
+    def withdraw(self, amount: float) -> bool:
         """
 
         Method to decrease account balance
